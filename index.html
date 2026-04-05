@@ -3,128 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sanskar Dongare</title>
+<title>Sanskar Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-</head>
 
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
 <body>
 
-<!-- LOADER -->
-<div id="loader"><h1>Loading...</h1></div>
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <img src="profile.jpg" class="profile">
 
-<!-- PROGRESS -->
-<div id="progress"></div>
+  <ul>
+    <li><i class="fas fa-user"></i> About</li>
+    <li><i class="fas fa-briefcase"></i> Projects</li>
+    <li><i class="fas fa-code"></i> Skills</li>
+    <li><i class="fas fa-envelope"></i> Contact</li>
+  </ul>
+</div>
 
-<!-- CURSOR -->
-<div class="cursor"></div>
+<!-- MAIN CONTENT -->
+<div class="main">
 
-<!-- NAVBAR -->
-<header class="nav-glass">
-  <div class="container nav">
+  <section class="hero">
+    <h1>Hi, I'm <span>Sanskar Dongare</span></h1>
+    <h3>A Web Developer</h3>
 
-    <h2 class="logo">Sanskar</h2>
-
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-
-    <nav id="nav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <button id="theme-toggle">🌙</button>
-
-  </div>
-</header>
-
-<!-- HERO -->
-<section id="home" class="hero section">
-  <div class="container hero-content">
-
-    <div class="hero-text">
-      <h1>Hello, I'm <span id="typing"></span></h1>
-      <p>Frontend Developer | UI Designer</p>
-      <button class="btn">Explore</button>
-    </div>
-
-    <div class="hero-img">
-      <img src="profile.jpg">
-    </div>
-
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section">
-  <div class="container">
-    <h2>About Me</h2>
-    <p class="about-text">
-      I am a Computer Engineering student passionate about web development and modern UI design.
+    <p>
+      Passionate programmer who loves solving real-world problems
+      and building modern websites.
     </p>
-  </div>
-</section>
 
-<!-- SKILLS -->
-<section id="skills" class="section dark">
-  <div class="container">
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="card">HTML</div>
-      <div class="card">CSS</div>
-      <div class="card">JavaScript</div>
-      <div class="card">GitHub</div>
+    <!-- SOCIAL -->
+    <div class="social">
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-github"></i>
+      <i class="fab fa-instagram"></i>
     </div>
-  </div>
-</section>
 
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <div class="container">
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">Portfolio Website</div>
-      <div class="card">Calculator App</div>
+    <!-- BUTTONS -->
+    <div class="buttons">
+      <button class="btn">Read More</button>
+      <button class="btn outline">Contact Me</button>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CERTIFICATES -->
-<section class="section dark">
-  <div class="container">
-    <h2>Certificates</h2>
-    <div class="grid">
-      <img src="adjjava.png">
-      <img src="android.png">
-      <img src="cpp.png">
-      <img src="ds.png">
-      <img src="java.png">
-      <img src="microprocessor.png">
-      <img src="python.png">
-    </div>
-  </div>
-</section>
+</div>
 
-<!-- CONTACT FORM -->
-<section id="contact" class="section">
-  <div class="container">
-    <h2>Contact Me</h2>
-
-    <form action="https://formspree.io/f/YOUR-ID" method="POST" class="contact-form">
-
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-
-      <button type="submit" class="btn">Send Message</button>
-
-    </form>
-  </div>
-</section>
-
-<script src="script.js"></script>
 </body>
 </html>
