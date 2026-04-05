@@ -1,38 +1,42 @@
 // LOADER
 window.addEventListener("load", ()=>{
   const loader = document.getElementById("loader");
-  if(loader){
-    loader.style.display="none";
-  }
+  if(loader) loader.style.display="none";
 });
 
-// MENU
-const toggle = document.getElementById("menu-toggle");
-const nav = document.getElementById("nav");
-
-if(toggle && nav){
-  toggle.addEventListener("click", ()=>{
-    nav.classList.toggle("active");
-  });
+// TYPING
+const text="Sanskar Dongare";
+let i=0;
+function typing(){
+  if(i<text.length){
+    document.getElementById("typing").innerHTML+=text.charAt(i);
+    i++;
+    setTimeout(typing,80);
+  }
 }
+typing();
 
-// DARK MODE
-const themeBtn = document.getElementById("theme-toggle");
+// CURSOR
+const cursor=document.querySelector(".cursor");
+document.addEventListener("mousemove",(e)=>{
+  cursor.style.top=e.clientY+"px";
+  cursor.style.left=e.clientX+"px";
+});
 
-if(themeBtn){
-  themeBtn.addEventListener("click", ()=>{
-    document.body.classList.toggle("light-mode");
-  });
-}
+// PROGRESS
+window.addEventListener("scroll",()=>{
+  let s=document.documentElement.scrollTop;
+  let h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  document.getElementById("progress").style.width=(s/h)*100+"%";
+});
 
 // ANIMATION
-const sections = document.querySelectorAll(".section");
-
-window.addEventListener("scroll", ()=>{
+const sections=document.querySelectorAll(".section");
+window.addEventListener("scroll",()=>{
   sections.forEach(sec=>{
-    if(window.scrollY > sec.offsetTop - 400){
-      sec.style.opacity = 1;
-      sec.style.transform = "translateY(0)";
+    if(window.scrollY>sec.offsetTop-400){
+      sec.style.opacity=1;
+      sec.style.transform="translateY(0)";
     }
   });
 });
