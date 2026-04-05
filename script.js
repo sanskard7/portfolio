@@ -1,42 +1,111 @@
-// LOADER
-window.addEventListener("load", ()=>{
-  const loader = document.getElementById("loader");
-  if(loader) loader.style.display="none";
-});
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
 
-// TYPING
-const text="Sanskar Dongare";
-let i=0;
-function typing(){
-  if(i<text.length){
-    document.getElementById("typing").innerHTML+=text.charAt(i);
-    i++;
-    setTimeout(typing,80);
+body{
+  background:linear-gradient(135deg,#0f172a,#1e1b4b);
+  color:white;
+}
+
+/* GLASS */
+.glass{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:15px;
+}
+
+/* NAV */
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 50px;
+  margin:20px;
+}
+
+nav a{
+  margin:0 10px;
+  color:white;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  padding:60px;
+}
+
+.hero span{
+  color:#a78bfa;
+}
+
+/* BUTTON */
+.btn{
+  margin-top:15px;
+  padding:10px 20px;
+  background:#7c3aed;
+  border:none;
+  border-radius:8px;
+  color:white;
+}
+
+/* SECTION */
+.section{
+  margin:40px;
+  padding:30px;
+}
+
+/* SKILLS */
+.skills{
+  display:flex;
+  gap:20px;
+}
+
+.card{
+  padding:20px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+/* CERTIFICATES */
+.certificates{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.cert-card{
+  padding:15px;
+  text-align:center;
+}
+
+.cert-card img{
+  width:100%;
+  border-radius:10px;
+}
+
+.cert-card:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px #7c3aed;
+}
+
+/* IMAGE */
+img{
+  width:100%;
+  border-radius:10px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero{
+    flex-direction:column;
   }
 }
-typing();
-
-// CURSOR
-const cursor=document.querySelector(".cursor");
-document.addEventListener("mousemove",(e)=>{
-  cursor.style.top=e.clientY+"px";
-  cursor.style.left=e.clientX+"px";
-});
-
-// PROGRESS
-window.addEventListener("scroll",()=>{
-  let s=document.documentElement.scrollTop;
-  let h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
-  document.getElementById("progress").style.width=(s/h)*100+"%";
-});
-
-// ANIMATION
-const sections=document.querySelectorAll(".section");
-window.addEventListener("scroll",()=>{
-  sections.forEach(sec=>{
-    if(window.scrollY>sec.offsetTop-400){
-      sec.style.opacity=1;
-      sec.style.transform="translateY(0)";
-    }
-  });
-});
