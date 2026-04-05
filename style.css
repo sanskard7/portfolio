@@ -6,19 +6,16 @@
 }
 
 body{
-  background:#0f172a;
+  background:linear-gradient(270deg,#0f172a,#1e1b4b,#312e81);
+  background-size:600% 600%;
+  animation:gradientMove 10s ease infinite;
   color:white;
-  transition:0.3s;
 }
 
 /* LIGHT MODE */
 .light-mode{
   background:white;
   color:black;
-}
-
-.light-mode .card{
-  background:#eee;
 }
 
 /* LOADER */
@@ -33,14 +30,40 @@ body{
   z-index:9999;
 }
 
-/* CONTAINER */
-.container{
-  width:90%;
-  max-width:1200px;
-  margin:auto;
+/* PROGRESS */
+#progress{
+  position:fixed;
+  top:0;
+  left:0;
+  height:4px;
+  background:#a78bfa;
+  width:0%;
+}
+
+/* CURSOR */
+body{cursor:none;}
+.cursor{
+  width:18px;
+  height:18px;
+  border:2px solid #a78bfa;
+  border-radius:50%;
+  position:fixed;
+  pointer-events:none;
 }
 
 /* NAV */
+.nav-glass{
+  position:sticky;
+  top:0;
+  backdrop-filter:blur(10px);
+}
+
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+}
+
 .nav{
   display:flex;
   justify-content:space-between;
@@ -57,14 +80,11 @@ nav a{
 /* HERO */
 .hero-content{
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  gap:40px;
+  justify-content:space-between;
 }
 
-.hero span{
-  color:#a78bfa;
-}
+.hero span{color:#a78bfa;}
 
 .hero-img img{
   width:250px;
@@ -80,7 +100,7 @@ nav a{
   color:white;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section{
   padding:60px 0;
   opacity:0;
@@ -101,54 +121,31 @@ nav a{
 
 /* CARD */
 .card{
-  background:#1f2937;
+  background:rgba(255,255,255,0.05);
   padding:20px;
   border-radius:10px;
-  text-align:center;
-  transition:0.3s;
 }
 
-.card:hover{
-  transform:translateY(-5px);
+/* CONTACT */
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  max-width:400px;
+  margin:auto;
 }
 
-/* IMAGES */
-img{
-  width:100%;
-  border-radius:10px;
-}
-
-/* MENU */
-.menu-toggle{
-  display:none;
-  font-size:25px;
-  cursor:pointer;
+.contact-form input,
+.contact-form textarea{
+  padding:10px;
+  border:none;
+  border-radius:8px;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-
   .hero-content{
     flex-direction:column;
     text-align:center;
   }
-
-  nav{
-    display:none;
-    flex-direction:column;
-    width:100%;
-    background:#111827;
-    position:absolute;
-    top:60px;
-    left:0;
-  }
-
-  nav.active{
-    display:flex;
-  }
-
-  .menu-toggle{
-    display:block;
-  }
-
 }
