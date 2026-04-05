@@ -1,32 +1,31 @@
-/* ABOUT TEXT */
-.about-text{
-  text-align:center;
-  max-width:800px;
-  margin:20px auto;
-  line-height:1.7;
-  color:#ddd;
-}
+// LOADER
+window.addEventListener("load", ()=>{
+  document.getElementById("loader").style.display="none";
+});
 
-.about-text span{
-  color:#a78bfa;
-  font-weight:500;
-}
+// MENU
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav");
 
-/* ABOUT CARDS */
-.about-cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;
-  margin-top:30px;
-}
+toggle.addEventListener("click", ()=>{
+  nav.classList.toggle("active");
+});
 
-.about-card{
-  padding:20px;
-  text-align:center;
-  transition:0.3s;
-}
+// DARK MODE
+const themeBtn = document.getElementById("theme-toggle");
 
-.about-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 0 20px #7c3aed;
-}
+themeBtn.addEventListener("click", ()=>{
+  document.body.classList.toggle("light-mode");
+});
+
+// ANIMATION
+const sections = document.querySelectorAll(".section");
+
+window.addEventListener("scroll", ()=>{
+  sections.forEach(sec=>{
+    if(window.scrollY > sec.offsetTop - 400){
+      sec.style.opacity=1;
+      sec.style.transform="translateY(0)";
+    }
+  });
+});
