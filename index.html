@@ -3,55 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sanskar Portfolio</title>
+<title>Sanskar Dongare</title>
 
 <link rel="stylesheet" href="style.css">
-
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
 
-<!-- SIDEBAR -->
-<div class="sidebar">
-  <img src="profile.jpg" class="profile">
+<header class="glass">
+  <div class="logo">S</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <ul>
-    <li><i class="fas fa-user"></i> About</li>
-    <li><i class="fas fa-briefcase"></i> Projects</li>
-    <li><i class="fas fa-code"></i> Skills</li>
-    <li><i class="fas fa-envelope"></i> Contact</li>
-  </ul>
-</div>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div>
+    <h1>Hello, I'm <span>Sanskar Dongare</span></h1>
+    <p>Frontend Developer | UI Designer</p>
+    <button class="btn">Hire Me</button>
+  </div>
 
-<!-- MAIN CONTENT -->
-<div class="main">
+  <div class="glass hero-img">
+    <img src="images/profile.jpg" alt="profile">
+  </div>
+</section>
 
-  <section class="hero">
-    <h1>Hi, I'm <span>Sanskar Dongare</span></h1>
-    <h3>A Web Developer</h3>
+<!-- ABOUT -->
+<section id="about" class="glass section">
+  <h2>About Me</h2>
+  <p>I am a passionate developer who builds modern, responsive websites.</p>
+</section>
 
-    <p>
-      Passionate programmer who loves solving real-world problems
-      and building modern websites.
-    </p>
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="card glass">HTML</div>
+    <div class="card glass">CSS</div>
+    <div class="card glass">JavaScript</div>
+    <div class="card glass">GitHub</div>
+  </div>
+</section>
 
-    <!-- SOCIAL -->
-    <div class="social">
-      <i class="fab fa-linkedin"></i>
-      <i class="fab fa-github"></i>
-      <i class="fab fa-instagram"></i>
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
+
+  <div class="card glass">
+    <h3>Portfolio Website</h3>
+    <p>Modern UI portfolio</p>
+  </div>
+
+</section>
+
+<!-- CERTIFICATES -->
+<section class="section">
+  <h2>Certificates</h2>
+
+  <div class="certificates">
+
+    <div class="cert-card glass">
+      <img src="images/adjjava.jpg">
+      <p>Advanced Java</p>
     </div>
 
-    <!-- BUTTONS -->
-    <div class="buttons">
-      <button class="btn">Read More</button>
-      <button class="btn outline">Contact Me</button>
+    <div class="cert-card glass">
+      <img src="images/android.jpg">
+      <p>Android</p>
     </div>
-  </section>
 
-</div>
+    <div class="cert-card glass">
+      <img src="images/cpp.jpg">
+      <p>C++</p>
+    </div>
 
+    <div class="cert-card glass">
+      <img src="images/ds.jpg">
+      <p>Data Structures</p>
+    </div>
+
+    <div class="cert-card glass">
+      <img src="images/java.jpg">
+      <p>Java</p>
+    </div>
+
+    <div class="cert-card glass">
+      <img src="images/microprocessor.jpg">
+      <p>Microprocessor</p>
+    </div>
+
+    <div class="cert-card glass">
+      <img src="images/python.jpg">
+      <p>Python</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section glass">
+  <h2>Contact</h2>
+  <p>Email: sanskardongare7@gmail.com</p>
+  <p>Instagram: sanskar_dongare</p>
+  <p>GitHub: sanskard7</p>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
