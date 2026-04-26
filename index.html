@@ -95,30 +95,53 @@
   <div class="certificates">
 
     <div class="cert-card glass">
-      <img src="java.png">
+      <img src="java.png" onclick="openImage(this.src)">
       <p>Java</p>
       <a href="java.png" download class="download-btn">Download</a>
     </div>
 
     <div class="cert-card glass">
-      <img src="python.png">
+      <img src="python.png" onclick="openImage(this.src)">
       <p>Python</p>
       <a href="python.png" download class="download-btn">Download</a>
     </div>
 
     <div class="cert-card glass">
-      <img src="ds.png">
+      <img src="ds.png" onclick="openImage(this.src)">
       <p>Data Structures</p>
       <a href="ds.png" download class="download-btn">Download</a>
+    </div>
+
+    <div class="cert-card glass">
+      <img src="android.png" onclick="openImage(this.src)">
+      <p>Android</p>
+      <a href="android.png" download class="download-btn">Download</a>
+    </div>
+
+    <div class="cert-card glass">
+      <img src="cpp.png" onclick="openImage(this.src)">
+      <p>C++</p>
+      <a href="cpp.png" download class="download-btn">Download</a>
+    </div>
+
+    <div class="cert-card glass">
+      <img src="microprocessor.png" onclick="openImage(this.src)">
+      <p>Microprocessor</p>
+      <a href="microprocessor.png" download class="download-btn">Download</a>
     </div>
 
   </div>
 </section>
 
+<!-- IMAGE MODAL -->
+<div id="imgModal" class="modal">
+  <span class="close" onclick="closeImage()">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
 <!-- CONTACT -->
 <section id="contact" class="section glass">
   <h2>Contact</h2>
-
   <p>Email: <a href="mailto:sanskardongare7@gmail.com">sanskardongare7@gmail.com</a></p>
   <p>GitHub: <a href="https://github.com/sanskard7" target="_blank">github.com/sanskard7</a></p>
 </section>
