@@ -29,7 +29,8 @@
     <p>Frontend Developer | UI Designer</p>
 
     <div class="hero-buttons">
-      <a href="resume.pdf" class="btn">Download Resume</a>
+      <!-- ✅ FIXED -->
+      <a href="resume.pdf" download class="btn">Download Resume</a>
       <a href="#projects" class="btn outline">View Projects</a>
     </div>
 
@@ -41,73 +42,27 @@
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="glass section">
-  <h2>About Me</h2>
-  <p>
-    I am a Computer Engineering student focused on building clean and responsive web applications.
-    I enjoy solving problems and improving my development skills through projects.
-  </p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section">
-  <h2>Skills</h2>
-  <div class="skills">
-    <div class="card glass">HTML</div>
-    <div class="card glass">CSS</div>
-    <div class="card glass">JavaScript</div>
-    <div class="card glass">C++</div>
-    <div class="card glass">Java</div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <h2>Projects</h2>
-
-  <div class="projects-grid">
-
-    <div class="card glass">
-      <h3>Portfolio Website</h3>
-      <p>Responsive portfolio using HTML, CSS, JavaScript.</p>
-      <div class="project-links">
-        <a href="#">GitHub</a>
-        <a href="#">Live</a>
-      </div>
-    </div>
-
-    <div class="card glass">
-      <h3>Food Calorie App</h3>
-      <p>AI-based calorie detection using images.</p>
-      <div class="project-links">
-        <a href="#">GitHub</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 <!-- CERTIFICATES -->
 <section class="section">
   <h2>Certificates</h2>
 
   <div class="certificates">
 
+    <!-- ✅ UPDATED -->
     <div class="cert-card glass">
-      <img src="java.png">
+      <img src="java.png" onclick="openImage(this.src)">
       <p>Java</p>
       <a href="java.png" download class="download-btn">Download</a>
     </div>
 
     <div class="cert-card glass">
-      <img src="python.png">
+      <img src="python.png" onclick="openImage(this.src)">
       <p>Python</p>
       <a href="python.png" download class="download-btn">Download</a>
     </div>
 
     <div class="cert-card glass">
-      <img src="ds.png">
+      <img src="ds.png" onclick="openImage(this.src)">
       <p>Data Structures</p>
       <a href="ds.png" download class="download-btn">Download</a>
     </div>
@@ -115,13 +70,11 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section glass">
-  <h2>Contact</h2>
-
-  <p>Email: <a href="mailto:sanskardongare7@gmail.com">sanskardongare7@gmail.com</a></p>
-  <p>GitHub: <a href="https://github.com/sanskard7" target="_blank">github.com/sanskard7</a></p>
-</section>
+<!-- ✅ ADD THIS MODAL -->
+<div id="imgModal" class="modal">
+  <span class="close" onclick="closeImage()">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
 
 <script src="script.js"></script>
 </body>
