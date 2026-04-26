@@ -11,7 +11,7 @@ document.querySelectorAll("nav a").forEach(link=>{
   });
 });
 
-// Image preview
+// Image modal
 function openImage(src){
   document.getElementById("imgModal").style.display="flex";
   document.getElementById("modalImg").src = src;
